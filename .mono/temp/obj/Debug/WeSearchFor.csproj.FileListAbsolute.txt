@@ -1,0 +1,16 @@
+C:\Users\Klaudia\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\Debug\WeSearchFor.csprojAssemblyReference.cache
+C:\Users\Klaudia\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\Debug\WeSearchFor.AssemblyInfoInputs.cache
+C:\Users\Klaudia\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\Debug\WeSearchFor.AssemblyInfo.cs
+C:\Users\Klaudia\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\Debug\WeSearchFor.csproj.CoreCompileInputs.cache
+C:\Users\Klaudia\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\bin\Debug\WeSearchFor.dll
+C:\Users\Klaudia\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\bin\Debug\WeSearchFor.pdb
+C:\Users\Klaudia\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\Debug\WeSearchFor.dll
+C:\Users\Klaudia\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\Debug\WeSearchFor.pdb
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\bin\Debug\WeSearchFor.dll
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\bin\Debug\WeSearchFor.pdb
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\Debug\WeSearchFor.csprojAssemblyReference.cache
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\Debug\WeSearchFor.AssemblyInfoInputs.cache
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\Debug\WeSearchFor.AssemblyInfo.cs
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\Debug\WeSearchFor.csproj.CoreCompileInputs.cache
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\Debug\WeSearchFor.dll
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\Debug\WeSearchFor.pdb
