@@ -1,0 +1,12 @@
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\bin\ExportRelease\WeSearchFor.deps.json
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\bin\ExportRelease\WeSearchFor.dll
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\bin\ExportRelease\ref\WeSearchFor.dll
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\bin\ExportRelease\WeSearchFor.pdb
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\ExportRelease\WeSearchFor.csprojAssemblyReference.cache
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\ExportRelease\WeSearchFor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\ExportRelease\WeSearchFor.AssemblyInfoInputs.cache
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\ExportRelease\WeSearchFor.AssemblyInfo.cs
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\ExportRelease\WeSearchFor.csproj.CoreCompileInputs.cache
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\ExportRelease\WeSearchFor.dll
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\ExportRelease\ref\WeSearchFor.dll
+C:\Users\Szafi\OneDrive\Projekty z uczelni\WeSearchFor\.mono\temp\obj\ExportRelease\WeSearchFor.pdb

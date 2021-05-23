@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/MainMenuScripts/ButtonExit.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/MainMenuScripts/LevelPicker.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/MainMenuScripts/ButtonStart.gd" type="Script" id=3]
+[ext_resource path="res://Textures/mainMenuBackground.png" type="Texture" id=4]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.06128
+margin_top = -2.64687
+margin_right = -1.06128
+margin_bottom = -2.64685
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mainMenuBackground" type="Sprite" parent="."]
+position = Vector2( 137.662, 97.6161 )
+scale = Vector2( 0.0785298, 0.0785298 )
+texture = ExtResource( 4 )
+
+[node name="ButtonStart" type="Button" parent="."]
+margin_left = 16.0614
+margin_top = 9.44561
+margin_right = 122.061
+margin_bottom = 89.4452
+rect_pivot_offset = Vector2( -875.864, -143 )
+shortcut_in_tooltip = false
+action_mode = 0
+text = "START GAME"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonExit" type="Button" parent="."]
+margin_left = 86.8349
+margin_top = 105.141
+margin_right = 192.835
+margin_bottom = 186.141
+rect_pivot_offset = Vector2( 324.709, 174.189 )
+text = "Exit"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelPicker" type="Button" parent="."]
+margin_left = 154.287
+margin_top = 8.76042
+margin_right = 260.287
+margin_bottom = 89.7604
+rect_pivot_offset = Vector2( -98.5057, -39 )
+text = "CHOOSE LEVEL"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ButtonStart" to="ButtonStart" method="_on_ButtonStart_pressed"]
+[connection signal="pressed" from="ButtonExit" to="ButtonExit" method="_on_ButtonExit_pressed"]
+[connection signal="pressed" from="LevelPicker" to="LevelPicker" method="_on_LevelPicker_pressed"]

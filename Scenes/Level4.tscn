@@ -1,0 +1,272 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Textures/block2.png" type="Texture" id=1]
+[ext_resource path="res://Textures/block3.png" type="Texture" id=2]
+[ext_resource path="res://Textures/spike.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/MovementBase.cs" type="Script" id=4]
+[ext_resource path="res://ball.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/BodyCollision.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/TestText.gd" type="Script" id=7]
+[ext_resource path="res://Textures/AnimatedTexture/Portal/Portal3.png" type="Texture" id=8]
+[ext_resource path="res://Textures/AnimatedTexture/Portal/Portal5.png" type="Texture" id=9]
+[ext_resource path="res://Textures/AnimatedTexture/Portal/Portal4.png" type="Texture" id=10]
+[ext_resource path="res://Textures/AnimatedTexture/Portal/Portal1.png" type="Texture" id=11]
+[ext_resource path="res://Textures/AnimatedTexture/Portal/Portal2.png" type="Texture" id=12]
+[ext_resource path="res://Textures/mainMenuBackground.png" type="Texture" id=13]
+[ext_resource path="res://Scripts/MainMenuScripts/LevelPicker.gd" type="Script" id=14]
+[ext_resource path="res://Scripts/MainMenuScripts/HelpButton.gd" type="Script" id=15]
+[ext_resource path="res://Scripts/MainMenuScripts/OptionButton.gd" type="Script" id=16]
+[ext_resource path="res://Scripts/MainMenuScripts/ButtonStart.gd" type="Script" id=17]
+[ext_resource path="res://Scripts/MainMenuScripts/ButtonExit.gd" type="Script" id=18]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.90781, 0.503323 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0.381836, 0, 0, 65, 65, 65, 0.381836, 0.381836 )
+
+[sub_resource type="TileSet" id=4]
+0/name = "block2.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 2 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "block3.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 65, 65 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 3 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 64, 32, 0 )
+
+[sub_resource type="TileSet" id=6]
+0/name = "spike.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 5 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 79.0038
+height = 68.8385
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 51.2007
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Terrain" type="Node2D" parent="." groups=[
+"Terrain",
+]]
+
+[node name="CollisionDetector" type="Area2D" parent="Terrain"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terrain/CollisionDetector"]
+light_mask = 0
+position = Vector2( 1234.76, 308.371 )
+scale = Vector2( 95.0165, 12.4658 )
+shape = SubResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="Terrain/CollisionDetector/CollisionShape2D"]
+position = Vector2( -12.8566, 3.76379 )
+scale = Vector2( 0.0105245, 0.0802196 )
+tile_set = SubResource( 4 )
+cell_quadrant_size = 64
+cell_tile_origin = 1
+format = 1
+tile_data = PoolIntArray( -917510, 0, 0, -917509, 0, 0, -917508, 0, 0, -917507, 0, 0, -917506, 0, 0, -917505, 0, 0, -983040, 0, 0, -983039, 0, 0, -983038, 0, 0, -983037, 0, 0, -983036, 0, 0, -983035, 0, 0, -851974, 0, 0, -917499, 0, 0, -786438, 0, 0, -851963, 0, 0, -720902, 0, 0, -786427, 0, 0, -655366, 0, 0, -720891, 0, 0, -589830, 0, 0, -655355, 0, 0, -524294, 0, 0, -589819, 0, 0, -458758, 0, 0, -524283, 0, 0, -393222, 0, 0, -393221, 0, 0, -393220, 0, 0, -393219, 0, 0, -393218, 0, 0, -393217, 0, 0, -458752, 0, 0, -458751, 0, 0, -458750, 0, 0, -458749, 0, 0, -458748, 0, 0, -458747, 0, 0 )
+
+[node name="TileMap2" type="TileMap" parent="Terrain/CollisionDetector/CollisionShape2D"]
+position = Vector2( -12.8335, -21.7796 )
+scale = Vector2( 0.0105245, 0.0802196 )
+tile_set = SubResource( 6 )
+cell_quadrant_size = 64
+cell_tile_origin = 1
+collision_use_parent = true
+format = 1
+
+[node name="Portal4" type="Area2D" parent="."]
+position = Vector2( -1168.76, 542.76 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal4"]
+position = Vector2( 1309.4, -786.52 )
+shape = SubResource( 7 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Portal4/CollisionShape2D"]
+position = Vector2( 1.22156, -1.16278 )
+frames = SubResource( 8 )
+frame = 7
+playing = true
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( -89.3727, -181.678 )
+script = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+scale = Vector2( 2.08, 1 )
+current = true
+zoom = Vector2( 1.5, 1.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource( 9 )
+script = ExtResource( 6 )
+
+[node name="ball" type="Sprite" parent="Player/CollisionShape2D"]
+position = Vector2( -0.822533, -0.249489 )
+scale = Vector2( 0.528566, 0.528566 )
+texture = ExtResource( 5 )
+
+[node name="OptionButton" type="Button" parent="Player"]
+margin_left = -763.162
+margin_top = -444.386
+margin_right = -566.162
+margin_bottom = -415.386
+rect_pivot_offset = Vector2( 44, 135.983 )
+text = "Options"
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mainMenuBackground" type="Sprite" parent="Player/OptionButton"]
+visible = false
+position = Vector2( 100.631, 323.8 )
+scale = Vector2( 0.0589257, 0.242585 )
+texture = ExtResource( 13 )
+
+[node name="ButtonStart" type="Button" parent="Player/OptionButton"]
+visible = false
+margin_left = 14.0
+margin_top = 58.0361
+margin_right = 188.0
+margin_bottom = 181.036
+rect_pivot_offset = Vector2( 1276.12, 122.819 )
+shortcut_in_tooltip = false
+action_mode = 0
+text = "START GAME"
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonExit" type="Button" parent="Player/OptionButton"]
+visible = false
+margin_left = 10.4364
+margin_top = 483.762
+margin_right = 192.436
+margin_bottom = 603.762
+rect_pivot_offset = Vector2( 324.709, 174.189 )
+text = "EXIT"
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelPicker" type="Button" parent="Player/OptionButton"]
+visible = false
+margin_left = 10.4363
+margin_top = 200.454
+margin_right = 192.436
+margin_bottom = 324.454
+rect_pivot_offset = Vector2( 94.3264, 81.9076 )
+text = "CHOOSE LEVEL"
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpButton" type="Button" parent="Player/OptionButton"]
+visible = false
+margin_left = 11.2183
+margin_top = 344.781
+margin_right = 192.218
+margin_bottom = 463.781
+text = "HELP"
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instr" type="RichTextLabel" parent="Player/OptionButton/HelpButton"]
+visible = false
+margin_left = 202.0
+margin_top = -329.0
+margin_right = 404.0
+margin_bottom = 111.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_shape_entered" from="Portal4" to="Player/CollisionShape2D" method="_on_Portal4_body_shape_entered"]
+[connection signal="pressed" from="Player/OptionButton" to="Player/OptionButton" method="_on_OptionButton_pressed"]
+[connection signal="pressed" from="Player/OptionButton/ButtonStart" to="Player/OptionButton/ButtonStart" method="_on_ButtonStart_pressed"]
+[connection signal="pressed" from="Player/OptionButton/ButtonExit" to="Player/OptionButton/ButtonExit" method="_on_ButtonExit_pressed"]
+[connection signal="pressed" from="Player/OptionButton/LevelPicker" to="Player/OptionButton/LevelPicker" method="_on_LevelPicker_pressed"]
+[connection signal="pressed" from="Player/OptionButton/HelpButton" to="Player/OptionButton/HelpButton" method="_on_HelpButton_pressed"]

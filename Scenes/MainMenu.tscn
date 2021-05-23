@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/MainMenuScripts/ButtonStart.gd" type="Script" id=1]
+[ext_resource path="res://Textures/mainMenuBackground.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/MainMenuScripts/LevelPicker.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/MainMenuScripts/ButtonExit.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/TestText.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/MainMenuScripts/HelpButton.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=9]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 444.827, 454.972 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+
+[node name="mainMenuBackground" type="Sprite" parent="."]
+position = Vector2( 194.163, 397.97 )
+scale = Vector2( 0.29758, 0.29758 )
+texture = ExtResource( 2 )
+offset = Vector2( 1119.62, -97.9866 )
+
+[node name="ButtonStart" type="Button" parent="."]
+margin_left = 102.941
+margin_top = 82.2864
+margin_right = 208.941
+margin_bottom = 162.286
+rect_pivot_offset = Vector2( -875.864, -143 )
+shortcut_in_tooltip = false
+action_mode = 0
+text = "START GAME"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelPicker" type="Button" parent="."]
+margin_left = 102.703
+margin_top = 202.129
+margin_right = 208.703
+margin_bottom = 283.129
+rect_pivot_offset = Vector2( -98.5057, -39 )
+text = "CHOOSE LEVEL"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpButton" type="Button" parent="."]
+margin_left = 102.307
+margin_top = 330.875
+margin_right = 207.307
+margin_bottom = 399.875
+text = "HELP"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instr" type="RichTextLabel" parent="HelpButton"]
+margin_left = 125.693
+margin_top = -246.875
+margin_right = 297.693
+margin_bottom = 189.125
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonExit" type="Button" parent="."]
+margin_left = 100.317
+margin_top = 448.906
+margin_right = 206.317
+margin_bottom = 518.906
+rect_pivot_offset = Vector2( 324.709, 174.189 )
+text = "EXIT"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ButtonStart" to="ButtonStart" method="_on_ButtonStart_pressed"]
+[connection signal="pressed" from="LevelPicker" to="LevelPicker" method="_on_LevelPicker_pressed"]
+[connection signal="pressed" from="HelpButton" to="HelpButton" method="_on_HelpButton_pressed"]
+[connection signal="pressed" from="ButtonExit" to="ButtonExit" method="_on_ButtonExit_pressed"]

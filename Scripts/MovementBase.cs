@@ -29,16 +29,16 @@ public class MovementBase : KinematicBody2D
 	
 	public void maxSpeed()
 	{
-		if (velocity.x > 400)
-		{ velocity.x = 400; }
-		else if (velocity.x < -400)
-		{ velocity.x = -400; }
+		if (velocity.x > 500)
+		{ velocity.x = 500; }
+		else if (velocity.x < -500)
+		{ velocity.x = -500; }
 	}
 	
 	public void slowingDown()
 	{
-		if (jumping)
-		{ slow = 200; }
+		if (jumping && IsOnFloor()==false)
+		{ slow = 5; }
 		else 
 		{ slow = 5; }
 		
@@ -58,12 +58,21 @@ public class MovementBase : KinematicBody2D
 		bool jump = Input.IsActionPressed("up");
 
 //Horizontal
+	if (IsOnFloor())
+	{
 		if (Input.IsActionPressed("right"))
 			{ velocity.x += speed; }
 
 		if (Input.IsActionPressed("left"))
 			{ velocity.x -= speed; }
-			
+	}
+	else{
+		if (Input.IsActionPressed("right"))
+			{ velocity.x += speed/2; }
+
+		if (Input.IsActionPressed("left"))
+			{ velocity.x -= speed/2; }
+	}
 //Vertical 
 		if (jump && IsOnFloor())
 		{
@@ -87,5 +96,6 @@ public class MovementBase : KinematicBody2D
 		}
 			
 		velocity = MoveAndSlide(velocity, new Vector2(0, -1));
+
 	}
 }

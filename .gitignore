@@ -1,0 +1,11 @@
+
+.mono/metadata/ide_messaging_meta.txt
+.mono/temp/obj/project.nuget.cache
+.mono/temp/obj/project.nuget.cache
+.mono/temp/obj/project.nuget.cache
+.mono/temp/obj/WeSearchFor.csproj.nuget.dgspec.json
+.mono/temp/obj/WeSearchFor.csproj.nuget.g.props
+*.png~
+*.kra~
+*.kra
+*.import
