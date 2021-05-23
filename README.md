@@ -3,4 +3,11 @@ WeSearchFor
 
 Gra platformowa 2D opartej na silniku Godot. 
 
-Specyfikacja wymagań: https://docs.google.com/spreadsheets/d/1Dm_e2Fr92XS2em8nu6s-i2l1tLpgGJ5M-aCWwPQXRys/edit?usp=sharing
+
+Zbiór dokumentów związanych z projektem, takie jak:
+1. Charakterystyka oprogramowania
+2. Prawa autorskie
+3. Specyfikacja wymagań
+5. Architektura Oprogramowania
+
+https://drive.google.com/drive/folders/1LDYxIx1BesUY0GHazNVNkelqD_Hf7TSa?usp=sharing
