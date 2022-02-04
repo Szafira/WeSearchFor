@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Scripts/BodyCollision.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/TestText.gd" type="Script" id=2]
@@ -11,6 +11,12 @@
 [ext_resource path="res://Textures/AnimatedTexture/Portal/Portal1.png" type="Texture" id=9]
 [ext_resource path="res://Textures/AnimatedTexture/Portal/Portal2.png" type="Texture" id=10]
 [ext_resource path="res://Scripts/MovementBase.cs" type="Script" id=11]
+[ext_resource path="res://Scripts/MainMenuScripts/ButtonStart.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/MainMenuScripts/OptionButton.gd" type="Script" id=13]
+[ext_resource path="res://Scripts/MainMenuScripts/HelpButton.gd" type="Script" id=14]
+[ext_resource path="res://Scripts/MainMenuScripts/LevelPicker.gd" type="Script" id=15]
+[ext_resource path="res://Scripts/MainMenuScripts/ButtonExit.gd" type="Script" id=16]
+[ext_resource path="res://Textures/mainMenuBackground.png" type="Texture" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -139,7 +145,7 @@ shape = SubResource( 4 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Portals/Portal1/CollisionShape2D"]
 position = Vector2( 1.22156, -1.16278 )
 frames = SubResource( 5 )
-frame = 4
+frame = 7
 playing = true
 
 [node name="Portal2" type="Area2D" parent="Portals"]
@@ -152,7 +158,6 @@ shape = SubResource( 6 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Portals/Portal2/CollisionShape2D"]
 position = Vector2( 1.22156, -1.16278 )
 frames = SubResource( 7 )
-frame = 5
 playing = true
 
 [node name="Portal3" type="Area2D" parent="Portals"]
@@ -165,7 +170,7 @@ shape = SubResource( 8 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Portals/Portal3/CollisionShape2D"]
 position = Vector2( 1.22156, -1.16278 )
 frames = SubResource( 9 )
-frame = 4
+frame = 7
 playing = true
 
 [node name="Portal4" type="Area2D" parent="Portals"]
@@ -178,37 +183,11 @@ shape = SubResource( 10 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Portals/Portal4/CollisionShape2D"]
 position = Vector2( 1.22156, -1.16278 )
 frames = SubResource( 11 )
-frame = 5
 playing = true
 
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( -89.3727, -181.678 )
 script = ExtResource( 11 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2( 682.808, 911.532 )
-scale = Vector2( 2.08, 1 )
-current = true
-zoom = Vector2( 2, 2 )
-
-[node name="Control" type="Control" parent="Player/Camera2D"]
-margin_left = 112.0
-margin_top = -244.0
-margin_right = 152.0
-margin_bottom = -204.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Player/Camera2D/Control"]
-margin_left = -600.96
-margin_top = -342.976
-margin_right = -392.96
-margin_bottom = -268.976
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( 680.647, 915.844 )
@@ -219,6 +198,94 @@ script = ExtResource( 1 )
 position = Vector2( -0.822533, -0.249489 )
 scale = Vector2( 0.528566, 0.528566 )
 texture = ExtResource( 6 )
+
+[node name="OptionButton" type="Button" parent="Player"]
+margin_left = -82.3937
+margin_top = 481.993
+margin_right = 114.606
+margin_bottom = 510.993
+rect_pivot_offset = Vector2( 44, 135.983 )
+text = "Options"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mainMenuBackground" type="Sprite" parent="Player/OptionButton"]
+visible = false
+position = Vector2( 100.631, 323.8 )
+scale = Vector2( 0.0589257, 0.242585 )
+texture = ExtResource( 17 )
+
+[node name="ButtonStart" type="Button" parent="Player/OptionButton"]
+visible = false
+margin_left = 14.0
+margin_top = 58.0361
+margin_right = 188.0
+margin_bottom = 181.036
+rect_pivot_offset = Vector2( 1276.12, 122.819 )
+shortcut_in_tooltip = false
+action_mode = 0
+text = "START GAME"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonExit" type="Button" parent="Player/OptionButton"]
+visible = false
+margin_left = 10.4364
+margin_top = 483.762
+margin_right = 192.436
+margin_bottom = 603.762
+rect_pivot_offset = Vector2( 324.709, 174.189 )
+text = "EXIT"
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelPicker" type="Button" parent="Player/OptionButton"]
+visible = false
+margin_left = 10.4363
+margin_top = 200.454
+margin_right = 192.436
+margin_bottom = 324.454
+rect_pivot_offset = Vector2( 94.3264, 81.9076 )
+text = "CHOOSE LEVEL"
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpButton" type="Button" parent="Player/OptionButton"]
+visible = false
+margin_left = 11.2183
+margin_top = 344.781
+margin_right = 192.218
+margin_bottom = 463.781
+text = "HELP"
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instr" type="RichTextLabel" parent="Player/OptionButton/HelpButton"]
+visible = false
+margin_left = 202.0
+margin_top = -329.0
+margin_right = 404.0
+margin_bottom = 111.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( 680.768, 921.039 )
+scale = Vector2( 2.08, 1 )
+current = true
+zoom = Vector2( 1.5, 1.5 )
 
 [node name="PortalsConnection" type="CollisionShape2D" parent="."]
 script = ExtResource( 1 )
@@ -274,3 +341,8 @@ __meta__ = {
 [connection signal="body_shape_entered" from="Portals/Portal2" to="PortalsConnection" method="_on_Portal2_body_shape_entered"]
 [connection signal="body_shape_entered" from="Portals/Portal3" to="PortalsConnection" method="_on_Portal3_body_shape_entered"]
 [connection signal="body_shape_entered" from="Portals/Portal4" to="PortalsConnection" method="_on_Portal4_body_shape_entered"]
+[connection signal="pressed" from="Player/OptionButton" to="Player/OptionButton" method="_on_OptionButton_pressed"]
+[connection signal="pressed" from="Player/OptionButton/ButtonStart" to="Player/OptionButton/ButtonStart" method="_on_ButtonStart_pressed"]
+[connection signal="pressed" from="Player/OptionButton/ButtonExit" to="Player/OptionButton/ButtonExit" method="_on_ButtonExit_pressed"]
+[connection signal="pressed" from="Player/OptionButton/LevelPicker" to="Player/OptionButton/LevelPicker" method="_on_LevelPicker_pressed"]
+[connection signal="pressed" from="Player/OptionButton/HelpButton" to="Player/OptionButton/HelpButton" method="_on_HelpButton_pressed"]
